@@ -1,0 +1,1 @@
+model_name = "mistralai/Ministral-8B-Instruct-2410"
