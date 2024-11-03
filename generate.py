@@ -5,7 +5,8 @@ from huggingface_hub import login
 
 os.environ['HF_HOME'] = '/work/pi_adamoneill_umass_edu/watermarkinggenai/.cache'
 
-login(token = os.getenv("USER_ACCESS_TOKEN"))
+# login(token = os.getenv("USER_ACCESS_TOKEN"))
+
 
 model_id = "meta-llama/Meta-Llama-3-70B-Instruct"
 
@@ -16,26 +17,29 @@ pipeline = transformers.pipeline(
     device_map="auto",
     token=os.getenv("USER_ACCESS_TOKEN"), trust_remote_code=True)
 
-messages = [
-    {"role": "system", "content": "You are a pirate chatbot who always responds in pirate speak!"},
-    {"role": "user", "content": "Who are you?"},
-]
+
 
 terminators = [
     pipeline.tokenizer.eos_token_id,
     pipeline.tokenizer.convert_tokens_to_ids("<|eot_id|>")
 ]
 
-outputs = pipeline(
+
+print(outputs[0]["generated_text"][-1])
+
+
+def generate_plain(prompt):
+    messages = [
+    {"role": "user", "content": prompt}]
+
+    outputs = pipeline(
     messages,
-    max_new_tokens=256,
+    max_new_tokens=20,
     eos_token_id=terminators,
     do_sample=True,
     temperature=0.6,
     top_p=0.9,
-)
-print(outputs[0]["generated_text"][-1])
-
+    pad_token_id=pipeline.tokenizer.eos_token_id)
 
 
 

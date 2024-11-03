@@ -1,35 +1,2 @@
-/home/meenakshiiye_umass_edu/.conda/envs/env/lib/python3.12/getpass.py:91: GetPassWarning: Can not control echo on the terminal.
-  passwd = fallback_getpass(prompt, stream)
-Warning: Password input may be echoed.
-Enter your token (input will not be visible): 
-    _|    _|  _|    _|    _|_|_|    _|_|_|  _|_|_|  _|      _|    _|_|_|      _|_|_|_|    _|_|      _|_|_|  _|_|_|_|
-    _|    _|  _|    _|  _|        _|          _|    _|_|    _|  _|            _|        _|    _|  _|        _|
-    _|_|_|_|  _|    _|  _|  _|_|  _|  _|_|    _|    _|  _|  _|  _|  _|_|      _|_|_|    _|_|_|_|  _|        _|_|_|
-    _|    _|  _|    _|  _|    _|  _|    _|    _|    _|    _|_|  _|    _|      _|        _|    _|  _|        _|
-    _|    _|    _|_|      _|_|_|    _|_|_|  _|_|_|  _|      _|    _|_|_|      _|        _|    _|    _|_|_|  _|_|_|_|
-
-Traceback (most recent call last):
-  File "/home/meenakshiiye_umass_edu/.conda/envs/env/lib/python3.12/getpass.py", line 69, in unix_getpass
-    old = termios.tcgetattr(fd)     # a copy to save
-          ^^^^^^^^^^^^^^^^^^^^^
-termios.error: (25, 'Inappropriate ioctl for device')
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/meenakshiiye_umass_edu/watermarkinggenai/generate.py", line 7, in <module>
-    login(token=os.getenv("USER_ACCESS_TOKEN"))
-  File "/home/meenakshiiye_umass_edu/.conda/envs/env/lib/python3.12/site-packages/huggingface_hub/_login.py", line 123, in login
-    interpreter_login(new_session=new_session, write_permission=write_permission)
-  File "/home/meenakshiiye_umass_edu/.conda/envs/env/lib/python3.12/site-packages/huggingface_hub/_login.py", line 275, in interpreter_login
-    token = getpass("Enter your token (input will not be visible): ")
-            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/meenakshiiye_umass_edu/.conda/envs/env/lib/python3.12/getpass.py", line 91, in unix_getpass
-    passwd = fallback_getpass(prompt, stream)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/meenakshiiye_umass_edu/.conda/envs/env/lib/python3.12/getpass.py", line 126, in fallback_getpass
-    return _raw_input(prompt, stream)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/meenakshiiye_umass_edu/.conda/envs/env/lib/python3.12/getpass.py", line 148, in _raw_input
-    raise EOFError
-EOFError
+Loading checkpoint shards:   0%|          | 0/30 [00:00<?, ?it/s]Loading checkpoint shards:   3%|▎         | 1/30 [00:10<04:57, 10.26s/it]Loading checkpoint shards:   7%|▋         | 2/30 [00:21<04:58, 10.66s/it]Loading checkpoint shards:  10%|█         | 3/30 [00:30<04:29,  9.96s/it]Loading checkpoint shards:  13%|█▎        | 4/30 [00:39<04:14,  9.78s/it]Loading checkpoint shards:  17%|█▋        | 5/30 [00:48<03:56,  9.46s/it]Loading checkpoint shards:  20%|██        | 6/30 [00:58<03:49,  9.55s/it]Loading checkpoint shards:  23%|██▎       | 7/30 [01:06<03:31,  9.19s/it]Loading checkpoint shards:  27%|██▋       | 8/30 [01:17<03:30,  9.55s/it]Loading checkpoint shards:  30%|███       | 9/30 [01:27<03:23,  9.68s/it]Loading checkpoint shards:  33%|███▎      | 10/30 [01:36<03:08,  9.43s/it]Loading checkpoint shards:  37%|███▋      | 11/30 [01:44<02:52,  9.06s/it]Loading checkpoint shards:  40%|████      | 12/30 [01:53<02:44,  9.16s/it]Loading checkpoint shards:  43%|████▎     | 13/30 [02:03<02:36,  9.23s/it]Loading checkpoint shards:  47%|████▋     | 14/30 [02:13<02:33,  9.60s/it]Loading checkpoint shards:  50%|█████     | 15/30 [02:22<02:19,  9.33s/it]Loading checkpoint shards:  53%|█████▎    | 16/30 [02:31<02:11,  9.37s/it]Loading checkpoint shards:  57%|█████▋    | 17/30 [02:40<01:57,  9.06s/it]Loading checkpoint shards:  60%|██████    | 18/30 [02:49<01:49,  9.09s/it]Loading checkpoint shards:  63%|██████▎   | 19/30 [02:58<01:39,  9.06s/it]Loading checkpoint shards:  67%|██████▋   | 20/30 [03:06<01:29,  8.93s/it]Loading checkpoint shards:  70%|███████   | 21/30 [03:15<01:18,  8.71s/it]Loading checkpoint shards:  73%|███████▎  | 22/30 [03:23<01:08,  8.56s/it]Loading checkpoint shards:  77%|███████▋  | 23/30 [03:33<01:03,  9.12s/it]Loading checkpoint shards:  80%|████████  | 24/30 [03:44<00:57,  9.58s/it]Loading checkpoint shards:  83%|████████▎ | 25/30 [03:53<00:47,  9.57s/it]Loading checkpoint shards:  87%|████████▋ | 26/30 [04:03<00:38,  9.63s/it]Loading checkpoint shards:  90%|█████████ | 27/30 [04:11<00:27,  9.17s/it]Loading checkpoint shards:  93%|█████████▎| 28/30 [04:20<00:18,  9.13s/it]Loading checkpoint shards:  97%|█████████▋| 29/30 [04:29<00:09,  9.10s/it]Loading checkpoint shards: 100%|██████████| 30/30 [04:33<00:00,  7.45s/it]Loading checkpoint shards: 100%|██████████| 30/30 [04:33<00:00,  9.11s/it]
+{'role': 'assistant', 'content': 'Arrr, shiver me timbers! Me be Captain Blackbeak Billy, the scur'}
